@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import SignIn from './pages/SignIn';
