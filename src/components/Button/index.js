@@ -6,7 +6,7 @@ import { Container, Text } from './styles';
 
 export default function Button({ children, loading, ...rest }) {
   return (
-    <Container {...rest}>
+    <Container {...rest} enabled={!loading}>
       {loading ? (
         <ActivityIndicator size="small" color="#fff" />
       ) : (
@@ -17,10 +17,11 @@ export default function Button({ children, loading, ...rest }) {
 }
 
 Button.propTypes = {
-  chidlren: PropTypes.string.isRequired,
+  chidlren: PropTypes.string,
   loading: PropTypes.bool,
 };
 
 Button.defaultProps = {
+  chidlren: null,
   loading: false,
 };

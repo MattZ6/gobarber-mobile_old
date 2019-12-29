@@ -21,6 +21,12 @@ export function signUpRequest(name, email, password) {
   };
 }
 
+export function signUpSuccess() {
+  return {
+    type: ActionTypes.SIGN_UP_SUCCESS,
+  };
+}
+
 export function signFailure() {
   return {
     type: ActionTypes.SIGN_FAILURE,

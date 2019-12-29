@@ -4,7 +4,7 @@ import { takeLatest, call, put, all } from 'redux-saga/effects';
 // import history from '~/services/history';
 import api from '../../../services/api';
 
-import { signInSuccess, signFailure } from './actions';
+import { signInSuccess, signFailure, signUpSuccess } from './actions';
 import ActionTypes from './types';
 
 export function* signIn({ payload }) {
@@ -35,8 +35,9 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
+
+    yield put(signUpSuccess());
 
     // history.push('/');
   } catch (error) {
